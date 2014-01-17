@@ -10,5 +10,5 @@ You can say if you like a beer or not. And you can also share these informations
 
 # Made with #
 
-Freebase : http://freebase.com/
-Wikipedia API : http://en.wikipedia.org/w/api.php
+- Freebase : http://freebase.com/
+- Wikipedia API : http://en.wikipedia.org/w/api.php
