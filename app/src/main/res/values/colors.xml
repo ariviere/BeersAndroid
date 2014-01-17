@@ -1,0 +1,16 @@
+<resources>
+    <color name="white">#cdcdcd</color>
+    <color name="light_white">#fff</color>
+    <color name="grey">#686868</color>
+    <color name="grey_lighter">#939393</color>
+
+    <color name="orange">#eb3b23</color>
+    <color name="green">#003d05</color>
+    <color name="red">#820000</color>
+
+    <color name="brown_darker">#291d16</color>
+    <color name="brown_dark">#4b3528</color>
+    <color name="brown">#7e5841</color>
+    <color name="brown_light">#8f6449</color>
+    <color name="brown_lighter">#ae7c5d</color>
+</resources>

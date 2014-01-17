@@ -1,0 +1,18 @@
+<resources>
+    <!--<dimen name="posts_right_margin">30dp</dimen>-->
+    <!--<dimen name="posts_list_margin">4dp</dimen>-->
+
+    <dimen name="medium_text">15dp</dimen>
+    <dimen name="large_text">20dp</dimen>
+    <dimen name="super_large_text">40dp</dimen>
+
+    <dimen name="small_marge">5dp</dimen>
+    <dimen name="small_plus_marge">7dp</dimen>
+    <dimen name="medium_marge">10dp</dimen>
+    <dimen name="large_marge">20dp</dimen>
+    <dimen name="super_large_marge">40dp</dimen>
+
+    <dimen name="grid_bloc_width">140dp</dimen>
+    <!--<dimen name="small_marge">5dp</dimen>-->
+    <!--<dimen name="posts_list_divider_margin">5dp</dimen>-->
+</resources>

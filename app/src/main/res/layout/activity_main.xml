@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <GridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="@dimen/small_marge"
+        android:columnWidth="@dimen/grid_bloc_width"
+        android:background="@color/white"
+        android:numColumns="auto_fit"
+        android:verticalSpacing="@dimen/medium_marge"
+        android:horizontalSpacing="@dimen/medium_marge"
+        android:stretchMode="columnWidth"
+        android:gravity="center"
+        />
+
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        style="@android:style/Widget.Holo.ProgressBar.Large"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <com.ar.classes.BackEditText
+        android:id="@+id/search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:imeOptions="actionSearch"
+        android:gravity="center"
+        android:layout_marginLeft="@dimen/super_large_marge"
+        android:layout_marginRight="@dimen/super_large_marge"
+        android:visibility="gone"
+        android:textColor="@color/brown_dark"
+        android:textSize="@dimen/super_large_text"
+        android:inputType="text" />
+
+
+</RelativeLayout>

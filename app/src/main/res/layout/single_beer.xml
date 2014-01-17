@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/beer_article_relative_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:id="@+id/beer_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:padding="@dimen/small_marge"
+        android:layout_margin="@dimen/medium_marge"
+        android:background="@color/brown_dark">
+
+        <ImageView
+            android:id="@+id/beer_image"
+            android:visibility="gone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="100dp"
+            android:minWidth="100dp"
+            android:layout_alignParentLeft="true"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/beer_image"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:padding="@dimen/small_marge"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/beer_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/large_text"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/beer_types"
+                android:visibility="gone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/thumb_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/medium_marge"
+        android:layout_below="@id/beer_header"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/thumbup"
+            android:text="@string/thumbup_text"
+            android:padding="@dimen/medium_marge"
+            android:textSize="@dimen/medium_text"
+            android:textColor="@color/white"
+            android:background="@drawable/thumbup_bg"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onButtonPressed"
+            />
+
+        <Button
+            android:id="@+id/thumbdown"
+            android:text="@string/thumbdown_text"
+            android:padding="@dimen/medium_marge"
+            android:textSize="@dimen/medium_text"
+            android:textColor="@color/white"
+            android:background="@drawable/thumbdown_bg"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onButtonPressed"
+            />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/thumb_layout"
+        android:padding="@dimen/medium_marge"
+        android:layout_margin="@dimen/medium_marge"
+        android:background="@color/light_white"
+        >
+
+    <RelativeLayout
+        android:id="@+id/beer_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/beer_properties"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentTop="true">
+
+                <LinearLayout
+                    android:id="@+id/region_layout"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/region_title"
+                        android:text="@string/region"
+                        android:textColor="@color/grey_lighter"
+                        android:textSize="@dimen/medium_text"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/region_value"
+                        android:textColor="@color/grey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/alcohol_content_layout"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/alcohol_content_title"
+                        android:text="@string/alcohol_content"
+                        android:textColor="@color/grey_lighter"
+                        android:textSize="@dimen/medium_text"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/alcohol_content_value"
+                        android:textColor="@color/grey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/first_bewed_layout"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/first_bewed_title"
+                        android:text="@string/first_bewed"
+                        android:textColor="@color/grey_lighter"
+                        android:textSize="@dimen/medium_text"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/first_bewed_value"
+                        android:textColor="@color/grey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ibu_scale_layout"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/ibu_scale_title"
+                        android:text="@string/ibu_scale"
+                        android:textColor="@color/grey_lighter"
+                        android:textSize="@dimen/medium_text"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/ibu_scale_value"
+                        android:textColor="@color/grey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/original_gravity_layout"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/original_gravity_title"
+                        android:text="@string/original_gravity"
+                        android:textColor="@color/grey_lighter"
+                        android:textSize="@dimen/medium_text"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/original_gravity_value"
+                        android:textColor="@color/grey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/final_gravity_layout"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/final_gravity_title"
+                        android:text="@string/final_gravity"
+                        android:textColor="@color/grey_lighter"
+                        android:textSize="@dimen/medium_text"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/final_gravity_value"
+                        android:textColor="@color/grey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/color_srm_layout"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/color_srm_title"
+                        android:text="@string/color_srm"
+                        android:textColor="@color/grey_lighter"
+                        android:textSize="@dimen/medium_text"
+                        android:textStyle="bold"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <TextView
+                        android:id="@+id/color_srm_value"
+                        android:textColor="@color/grey"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/wikipedia"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/medium_marge"
+                android:text="@string/wikipedia"
+                android:textColor="@color/grey_lighter"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/beer_properties" />
+
+
+            <TextView
+                android:id="@+id/beer_description"
+                android:visibility="gone"
+                android:textColor="@color/grey"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/wikipedia" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

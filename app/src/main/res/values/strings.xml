@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Beers \\o/</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="first_bewed">First brewed: </string>
+    <string name="ibu_scale">IBU scale: </string>
+    <string name="original_gravity">Original gravity: </string>
+    <string name="final_gravity">Final gravity: </string>
+    <string name="color_srm">Color SRM: </string>
+    <string name="region">Region: </string>
+    <string name="alcohol_content">Alcohol content: </string>
+    <string name="wikipedia">Wikipedia</string>
+
+    <string name="home">Home</string>
+    <string name="beer_styles">Beer styles</string>
+    <string name="search">Search</string>
+    <string name="not_found">We haven\'t found a single beer :(</string>
+    <string name="drawer_open">Open</string>
+    <string name="drawer_close">Close</string>
+
+    <string name="previous">Previous</string>
+    <string name="next">Next</string>
+    <string name="custom">Custom</string>
+    <string name="beer_error">We had a problem retrieving your beers.</string>
+
+    <string name="thumbup_text">Awesome :-)</string>
+    <string name="thumbdown_text">Not that good</string>
+</resources>

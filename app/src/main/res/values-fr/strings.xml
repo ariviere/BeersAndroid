@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Bières \\o/</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="first_bewed">Brassée la 1ère fois en </string>
+    <string name="ibu_scale">Graduation IBU : </string>
+    <string name="original_gravity">Gravité originale : </string>
+    <string name="final_gravity">Gravité finale : </string>
+    <string name="color_srm">Couleur SRM : </string>
+    <string name="region">Région : </string>
+    <string name="alcohol_content">Teneur en alcool : </string>
+    <string name="wikipedia">Wikipedia</string>
+
+    <string name="home">Accueil</string>
+    <string name="beer_styles">Type de bière</string>
+    <string name="search">Rechercher</string>
+    <string name="not_found">Nous n\'avons pas trouvé la moindre bière :(</string>
+    <string name="drawer_open">Ouvrir</string>
+    <string name="drawer_close">Fermé</string>
+
+    <string name="previous">Précédent</string>
+    <string name="next">Suivant</string>
+    <string name="custom">Perso</string>
+    <string name="beer_error">On a eu un problème en cherchant vos bières.</string>
+
+    <string name="thumbup_text">Géniale :-)</string>
+    <string name="thumbdown_text">Pas si bonne</string>
+</resources>

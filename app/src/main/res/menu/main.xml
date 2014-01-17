@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.ar.activities.ListActivity" >
+    <item android:id="@+id/item_search"
+        android:title="@string/search"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="always" />
+    <item android:id="@+id/item_custom"
+        android:title="@string/custom"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_custom"
+        app:showAsAction="always" />
+    <item android:id="@+id/item_close_search"
+        android:title="@string/search"
+        android:showAsAction="always"
+        android:visible="false"
+        android:icon="@drawable/ic_close"
+        app:showAsAction="always" />
+    <item android:id="@+id/item_previous"
+        android:title="@string/previous"
+        android:icon="@drawable/ic_left"
+        android:showAsAction="always"
+        app:showAsAction="always" />
+    <item android:id="@+id/item_next"
+        android:title="@string/next"
+        android:icon="@drawable/ic_right"
+        android:showAsAction="always"
+        app:showAsAction="always" />
+
+</menu>
