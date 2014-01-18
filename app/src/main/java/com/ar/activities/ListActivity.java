@@ -49,9 +49,10 @@ public class ListActivity extends Activity implements NfcAdapter.CreateNdefMessa
 
     private BeerAdapter beerAdapter;
 
+
     private Menu menu;
-    BeersManipulation bm = new BeersManipulation();
-    NfcAdapter mNfcAdapter;
+    private BeersManipulation bm = new BeersManipulation();
+    private NfcAdapter mNfcAdapter;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -60,9 +61,6 @@ public class ListActivity extends Activity implements NfcAdapter.CreateNdefMessa
 
         this.context = this;
 
-
-        String language = getApplicationContext().getResources().getConfiguration().locale.getLanguage();
-        Log.d(TAG, "language: " + language);
 
         loadingBar  = (ProgressBar) findViewById(R.id.loading);
         gridView    = (GridView)    findViewById(R.id.gridview);

@@ -1,5 +1,6 @@
 package com.ar.classes;
 
+import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.drawable.Drawable;
@@ -135,10 +136,18 @@ public class BeersJSON {
         return null;
     }
 
-    public String getBeerDescription(String id){
+    public String getBeerDescription(Context context, String id){
 //        String url = "https://www.googleapis.com/freebase/v1/text" + beer.getId();
         String formattedName = id.replace(" ", "_");
-        String  url = "http://en.wikipedia.org/w/api.php?action=query&prop=extracts&titles=" + formattedName + "&format=json";
+
+        String language = context.getResources().getConfiguration().locale.getLanguage();
+
+        String  url;
+
+        if(language.equals("fr"))
+            url = "http://fr.wikipedia.org/w/api.php?action=query&prop=extracts&titles=" + formattedName + "&format=json";
+        else
+            url = "http://en.wikipedia.org/w/api.php?action=query&prop=extracts&titles=" + formattedName + "&format=json";
 
         try{
             InputStream is;
@@ -179,7 +188,7 @@ public class BeersJSON {
                     String redirectBeer = description.substring(17);
                     String[] array = redirectBeer.split("<");
                     id = array[0];
-                    return getBeerDescription(id);
+                    return getBeerDescription(context, id);
                 }
                 else{
                     return jsonObjectdatas.getString("extract");
